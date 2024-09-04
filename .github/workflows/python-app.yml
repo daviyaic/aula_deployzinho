@@ -30,3 +30,9 @@ jobs:
       
     - name: Report do teste
       run: coverage report -m
+    - name: Render Deploy Action
+      uses: johnbeynon/render-deploy-action@v0.0.8
+      with:
+        service-id: srv-crc517tsvqrc73f64vpg
+        api-key: rnd_bzsZ5UquAjc04tKJlbLiNgN81K1i 
+          
