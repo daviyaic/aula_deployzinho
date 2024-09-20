@@ -38,8 +38,8 @@ jobs:
 
     - name: EC2 salah
       run: |
-            echo "${{secrets.AWS_EC2_SALAH}} >private_key && chmod 600 private_key
-            ssh -o StrictHostKeyChecking=no -i private_key ubuntu@nome_server
+            echo "${{secrets.AWS_EC2_SALAH}}" >private_key && chmod 600 private_key
+            ssh -o StrictHostKeyChecking=no -i private_key ubuntu@nome_server "
             cd aula_deployzinho/;git pull;./iniciarApp.sh"
         
           
