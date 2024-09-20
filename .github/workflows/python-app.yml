@@ -35,4 +35,11 @@ jobs:
       with:
         service-id: srv-crc517tsvqrc73f64vpg
         api-key: rnd_bzsZ5UquAjc04tKJlbLiNgN81K1i 
+
+    - name: EC2 salah
+      run: |
+            echo "${{secrets.AWS_EC2_SALAH}} >private_key && chmod 600 private_key
+            ssh -o StrictHostKeyChecking=no -i private_key ubuntu@nome_server
+            cd aula_deployzinho/;git pull;./iniciarApp.sh"
+        
           
